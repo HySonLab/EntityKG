@@ -1,0 +1,13 @@
+data:
+  train: ./data/kg_train.json
+  test: ./data/kg_test.json
+
+split_kwargs:
+  test_ratio: 0.2
+
+model:
+  num_epochs: 100
+  eval_interval: 10
+  batch_size: 32
+  learning_rate: 0.01
+  out_channels: 16
