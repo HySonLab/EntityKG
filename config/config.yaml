@@ -1,13 +1,12 @@
-data:
-  train: ./data/kg_train.json
-  test: ./data/kg_test.json
+data: ./data/kg_full_21-05-2024.json
 
 split_kwargs:
-  test_ratio: 0.2
+  test_ratio: 0.5
 
 model:
-  num_epochs: 100
+  encoder: vinai/phobert-base-v2
+  num_epochs: 300
   eval_interval: 10
   batch_size: 32
-  learning_rate: 0.01
+  learning_rate: 0.005
   out_channels: 16
