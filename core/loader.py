@@ -7,13 +7,6 @@ class GraphDataset(torch.utils.data.Dataset):
         self.nodes = nodes
         self.edges = edges
         self.split_kwargs = split_kwargs
-        for i, node in enumerate(nodes):
-            if i > 7750:
-                try:
-                    print(i, node)
-                except TypeError:
-                    print("Error")
-                    print(node)
         self.node_to_index = {node: i for i, node in enumerate(nodes)}
         self.index_to_node = {i: node for node, i in self.node_to_index.items()}
         self.data = self.create_data()
