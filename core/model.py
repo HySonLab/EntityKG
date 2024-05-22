@@ -1,6 +1,6 @@
 import torch
 import torch.nn.functional as F
-from torch_geometric.nn import SAGEConv, GCNConv, GATConv, HEATConv, HANConv
+from torch_geometric.nn import SAGEConv, GCNConv, GATConv
 
 
 # SAGE for link prediction
