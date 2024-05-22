@@ -1,3 +1,5 @@
 torch==2.3.0
 torch_geometric==2.5.3
 wanb==0.17.0
+pyvi==0.1.1
+transformers==4.41.0
