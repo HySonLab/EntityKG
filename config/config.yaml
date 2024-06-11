@@ -1,12 +1,25 @@
-data: ./data/kg_full_21-05-2024.json
+# Description: Configuration file for the training process
 
-split_kwargs:
-  test_ratio: 0.5
+# The following parameters are used to load the dataset
+data: ./data/kg_full_03-06-2024.json
 
+# The following parameters are used to split the dataset into train, validation, and test sets
+splitted_node_kwargs:
+  split: train_rest
+  num_val: 0.2
+  num_test: 0.2
+
+splitted_edge_kwargs:
+  num_val: 0.2
+  num_test: 0.2
+  is_undirected: True
+  split_labels: True
+
+# The following parameters are used to train the model
 model:
+  model_name: GAT
   encoder: vinai/phobert-base-v2
-  num_epochs: 300
-  eval_interval: 10
+  num_epochs: 100
   batch_size: 32
-  learning_rate: 0.005
-  out_channels: 16
+  learning_rate: 0.01
+  out_channels: 32
