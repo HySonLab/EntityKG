@@ -64,8 +64,8 @@ def main():
     nodes, edges = get_nodes_and_edges(config["data"])
 
     embedding_id = args.embedding
-    # dataset = GraphDataset(nodes, edges, embedding_id)
-    dataset = GraphDataset(nodes[:400], edges[:200], embedding_id)
+    dataset = GraphDataset(nodes, edges, embedding_id)
+    # dataset = GraphDataset(nodes[:400], edges[:200], embedding_id)
 
     transform = RandomLinkSplit(**config["splitted_edge_kwargs"], edge_types=None)
     train_data, val_data, test_data = transform(dataset.data)

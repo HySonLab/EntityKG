@@ -72,8 +72,8 @@ def main():
     nodes, edges = get_nodes_and_edges(config["data"])
 
     embedding_id = args.embedding
-    # dataset = GraphDataset(nodes, edges, embedding_id)
-    dataset = GraphDataset(nodes[:400], edges[:200], embedding_id)
+    dataset = GraphDataset(nodes, edges, embedding_id)
+    # dataset = GraphDataset(nodes[:400], edges[:200], embedding_id)
 
     transform = RandomNodeSplit(**config["splitted_node_kwargs"])
     data = transform(dataset.data)

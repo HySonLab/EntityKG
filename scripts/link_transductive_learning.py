@@ -57,8 +57,8 @@ def main():
     test_nodes, test_edges = get_nodes_and_edges(config["test_data"])
 
     embedding_id = args.embedding
-    # dataset = MultiGraphDataset(train_nodes, train_edges, test_nodes, test_edges, embedding_id)
-    dataset = MultiGraphDataset(train_nodes[:400], train_edges[:200], test_nodes[:400], test_edges[:200], embedding_id)
+    dataset = MultiGraphDataset(train_nodes, train_edges, test_nodes, test_edges, embedding_id)
+    # dataset = MultiGraphDataset(train_nodes[:400], train_edges[:200], test_nodes[:400], test_edges[:200], embedding_id)
     data = dataset.data.to(device)
 
     # Merge datasets
