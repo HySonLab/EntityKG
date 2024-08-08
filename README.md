@@ -14,9 +14,9 @@ To set up the environment and run the experiments, follow the steps below:
 
 Before you start, create a Python virtual environment and install the required dependencies.
 
-\```bash
+```bash
 pip install -r requirements.txt
-\```
+```
 
 ### 2. Configure Hugging Face Token
 
@@ -26,6 +26,6 @@ You will need a Hugging Face API token to access certain resources used in this 
 
 Once the environment is set up and the configurations are complete, you can run the experiments using the provided script.
 
-\```bash
+```bash
 sh run.sh
-\```
+```
