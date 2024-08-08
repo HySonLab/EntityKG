@@ -131,3 +131,4 @@ dmypy.json
 core/__pycache__/
 core/*.ipynb
 wandb/  
+nbs/
