@@ -57,10 +57,10 @@ class GCNEncoder(torch.nn.Module):
 
 # GAT for node classification
 class GAT(torch.nn.Module):
-    def __init__(self, in_channels, out_channels, heads=1):
+    def __init__(self, in_channels, out_channels, heads=1, dropout=0.2):
         super(GAT, self).__init__()
-        self.conv1 = GATConv(in_channels, 2 * out_channels, heads=heads)
-        self.conv2 = GATConv(2 * out_channels * heads, out_channels, heads=1)
+        self.conv1 = GATConv(in_channels, 2 * out_channels, heads=heads, dropout=dropout)
+        self.conv2 = GATConv(2 * out_channels * heads, out_channels, heads=heads, dropout=dropout)
 
     def forward(self, x, edge_index):
         x = F.elu(self.conv1(x, edge_index))
@@ -70,11 +70,11 @@ class GAT(torch.nn.Module):
 
 # GAT for link prediction
 class GATEncoder(torch.nn.Module):
-    def __init__(self, in_channels, out_channels, heads=1):
+    def __init__(self, in_channels, out_channels, heads=1, dropout=0.5):
         super(GATEncoder, self).__init__()
-        self.conv1 = GATConv(in_channels, 2 * out_channels, heads=heads)
-        self.conv_mu = GATConv(2 * out_channels * heads, out_channels, heads=1)
-        self.conv_logstd = GATConv(2 * out_channels * heads, out_channels, heads=1)
+        self.conv1 = GATConv(in_channels, 2 * out_channels, heads=heads, dropout=dropout)
+        self.conv_mu = GATConv(2 * out_channels * heads, out_channels, heads=heads, dropout=dropout)
+        self.conv_logstd = GATConv(2 * out_channels * heads, out_channels, heads=heads, dropout=dropout)
 
     def forward(self, x, edge_index):
         x = F.elu(self.conv1(x, edge_index))
@@ -83,10 +83,10 @@ class GATEncoder(torch.nn.Module):
 
 # SuperGAT for node classification
 class SuperGAT(torch.nn.Module):
-    def __init__(self, in_channels, out_channels, heads=1):
+    def __init__(self, in_channels, out_channels, heads=1, dropout=0.2):
         super(SuperGAT, self).__init__()
-        self.conv1 = SuperGATConv(in_channels, 2 * out_channels, heads=heads)
-        self.conv2 = SuperGATConv(2 * out_channels * heads, out_channels, heads=1)
+        self.conv1 = SuperGATConv(in_channels, 2 * out_channels, heads=heads, dropout=dropout)
+        self.conv2 = SuperGATConv(2 * out_channels * heads, out_channels, heads=heads, dropout=dropout)
 
     def forward(self, x, edge_index):
         x = F.elu(self.conv1(x, edge_index))
@@ -96,11 +96,11 @@ class SuperGAT(torch.nn.Module):
 
 # SuperGAT for link prediction
 class SuperGATEncoder(torch.nn.Module):
-    def __init__(self, in_channels, out_channels, heads=1):
+    def __init__(self, in_channels, out_channels, heads=1, dropout=0.5):
         super(SuperGATEncoder, self).__init__()
-        self.conv1 = SuperGATConv(in_channels, 2 * out_channels, heads=heads)
-        self.conv_mu = SuperGATConv(2 * out_channels * heads, out_channels, heads=1)
-        self.conv_logstd = SuperGATConv(2 * out_channels * heads, out_channels, heads=1)
+        self.conv1 = SuperGATConv(in_channels, 2 * out_channels, heads=heads, dropout=dropout)
+        self.conv_mu = SuperGATConv(2 * out_channels * heads, out_channels, heads=heads, dropout=dropout)
+        self.conv_logstd = SuperGATConv(2 * out_channels * heads, out_channels, heads=heads, dropout=dropout)
 
     def forward(self, x, edge_index):
         x = F.elu(self.conv1(x, edge_index))
