@@ -26,13 +26,13 @@ python scripts/link_transductive_learning.py --config config/link_transductive_l
 
 # ASR - Example: ASR 28.8 (Modify the config file accordingly)
 ## Node classification
-python scripts/node_transductive_learning.py --config config/node_transductive_learning_asr.yaml --embedding random --task asr
-python scripts/node_transductive_learning.py --config config/node_transductive_learning_asr.yaml --embedding vinai/phobert-base --task asr
-python scripts/link_transductive_learning.py --config config/link_transductive_learning_asr.yaml --embedding Alibaba-NLP/gte-large-en-v1.5 --task asr
-python scripts/link_transductive_learning.py --config config/link_transductive_learning_asr.yaml --embedding Alibaba-NLP/gte-Qwen2-7B-instruct --task asr
+python scripts/node_transductive_learning.py --config config/node_transductive_learning_asr.yaml --embedding random --type asr
+python scripts/node_transductive_learning.py --config config/node_transductive_learning_asr.yaml --embedding vinai/phobert-base --type asr
+python scripts/link_transductive_learning.py --config config/link_transductive_learning_asr.yaml --embedding Alibaba-NLP/gte-large-en-v1.5 --type asr
+python scripts/link_transductive_learning.py --config config/link_transductive_learning_asr.yaml --embedding Alibaba-NLP/gte-Qwen2-7B-instruct --type asr
 
 ## Link prediction
-python scripts/link_transductive_learning.py --config config/link_transductive_learning_asr.yaml --embedding random --task asr
-python scripts/link_transductive_learning.py --config config/link_transductive_learning_asr.yaml --embedding vinai/phobert-base --task asr
-python scripts/link_transductive_learning.py --config config/link_transductive_learning_asr.yaml --embedding Alibaba-NLP/gte-large-en-v1.5 --task asr
-python scripts/link_transductive_learning.py --config config/link_transductive_learning_asr.yaml --embedding Alibaba-NLP/gte-Qwen2-7B-instruct --task asr
+python scripts/link_transductive_learning.py --config config/link_transductive_learning_asr.yaml --embedding random --type asr
+python scripts/link_transductive_learning.py --config config/link_transductive_learning_asr.yaml --embedding vinai/phobert-base --type asr
+python scripts/link_transductive_learning.py --config config/link_transductive_learning_asr.yaml --embedding Alibaba-NLP/gte-large-en-v1.5 --type asr
+python scripts/link_transductive_learning.py --config config/link_transductive_learning_asr.yaml --embedding Alibaba-NLP/gte-Qwen2-7B-instruct --type asr
