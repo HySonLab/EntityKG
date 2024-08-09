@@ -3,6 +3,7 @@
 This repository contains the codebase for the **wav2graph** paper:
 
 **wav2graph**: A Framework for Supervised Learning Knowledge Graph from Speech
+
 https://arxiv.org/pdf/2408.04174.pdf
 
 
