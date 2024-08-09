@@ -1,4 +1,4 @@
-# EntityKG
+# EntityKG (Entity Knowledge Graph)
 
 This repository contains the codebase for the **wav2graph** paper:
 
