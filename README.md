@@ -1,6 +1,10 @@
 # EntityKG
 
-This repository contains the codebase for the **wav2graph** paper. 
+This repository contains the codebase for the **wav2graph** paper:
+
+**wav2graph**: A Framework for Supervised Learning Knowledge Graph from Speech
+https://arxiv.org/pdf/2408.04174.pdf
+
 
 ## Project Overview
 
@@ -28,4 +32,18 @@ Once the environment is set up and the configurations are complete, you can run 
 
 ```bash
 sh run.sh
+```
+
+## Cite our work
+
+```bibtex
+@misc{leduc2024wav2graphframeworksupervisedlearning,
+      title={wav2graph: A Framework for Supervised Learning Knowledge Graph from Speech}, 
+      author={Khai Le-Duc and Quy-Anh Dang and Tan-Hanh Pham and Truong-Son Hy},
+      year={2024},
+      eprint={2408.04174},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2408.04174}, 
+}
 ```
