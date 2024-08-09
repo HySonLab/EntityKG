@@ -1,5 +1,7 @@
 # EntityKG (Entity Knowledge Graph)
 
+![EntityKG](EntityKG.png)
+
 This repository contains the codebase for the **wav2graph** paper:
 
 **wav2graph**: A Framework for Supervised Learning Knowledge Graph from Speech
